@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node ./src/index.js",
+    "test:server": "NODE_ENV=test npm start",
     "error": "TEST_ERROR=true node ./src/index.js",
     "reset": "psql -U development -d scheduler_development < ./src/db/schema/create.sql && psql -U development -d scheduler_development < ./src/db/schema/development.sql"
   },
@@ -17,6 +18,7 @@
     "express": "^4.16.4",
     "helmet": "^3.18.0",
     "pg": "^8.5.0",
+    "psql": "0.0.1",
     "socket.io": "^2.2.0",
     "ws": "^7.0.0"
   },
